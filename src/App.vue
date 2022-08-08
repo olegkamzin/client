@@ -1,0 +1,30 @@
+<template>
+<header-main/>
+<router-view></router-view>
+<footer-main/>
+</template>
+
+<script>
+import HeaderMain from '@/components/common/HeaderMain.vue'
+import FooterMain from '@/components/common/FooterMain.vue'
+
+export default {
+	components: { HeaderMain, FooterMain }
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; box-sizing: border-box; }
+body { background: #F0F0F0; font-size: 14px; }
+a { color: #000; }
+svg { box-sizing: content-box; }
+h1 { font-size: 30px; margin: 0 0 20px 0; }
+h2 { font-size: 26px; margin: 0 0 20px 0; }
+h3 { font-size: 22px; margin: 0 0 20px 0; }
+.wrapper { padding: 30px; background: #FFF; }
+@media screen and (max-width: 1020px) {
+.wrapper { padding: 10px; } 
+}
+</style>
