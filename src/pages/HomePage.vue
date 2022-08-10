@@ -25,7 +25,7 @@
 import ProductList from '@/components/ProductList'
 import ButtonMain from '@/components/ui/ButtonMain.vue'
 import ProductFilter from '@/components/ProductFilter.vue'
-import ProductService from '@/api/ProductService.js'
+import ProductService from '@/http/api/ProductService.js'
 
 export default {
 	components: { ButtonMain, ProductFilter, ProductList },

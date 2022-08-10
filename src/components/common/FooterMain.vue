@@ -1,13 +1,13 @@
 <template>
-<div class="footer">
-    <div class="footer_block">
+	<div class="footer">
+		<div class="footer_block">
 
-    </div>
-</div>
+		</div>
+	</div>
 </template>
 
 <script>
-export default {
+export default  {
 	name: 'footer-main'
 }
 </script>

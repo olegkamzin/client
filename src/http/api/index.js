@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const API_URL = 'http://localhost:3000'
+export const API_URL = 'https://api.shinpi.ru/'
 
 const $apiget = axios.create({
 	baseURL: API_URL

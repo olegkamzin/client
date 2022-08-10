@@ -6,8 +6,8 @@
 	<div class="wrapper">
 		<div class="product_body">
 			<div class="product_img">
-				<img v-if="product.model.img.length !== 0" :src="product.model.img">
-				<img v-else src="../assets/no-img.png">
+				<img v-if="product.model.img.length !== 0" :src="'https://media.shinpi.ru/800/' + product.model.img[0]">
+				<img v-else src="../assets/no-img.webp">
 			</div>
 			<div class="product_info">
 				<div class="product_params">
@@ -58,7 +58,7 @@ import IconSpeed from '@/components/ui/icons/IconSpeed.vue'
 import IconSnow from '@/components/ui/icons/IconSnow.vue'
 import IconSummer from '@/components/ui/icons/IconSummer.vue'
 import IconCart from '@/components/ui/icons/IconCart.vue'
-import ProductService from '@/api/ProductService'
+import ProductService from '@/http/api/ProductService'
 
 export default {
 	components: { ButtonMain, IconWidth, IconHeight, IconDiameter, IconWeight, IconSpeed, IconSnow, IconSummer, IconCart },
@@ -79,7 +79,7 @@ export default {
 	},
 	beforeMount() {
 		this.productGet()
-		// document.title = `${this.brand.name} ${this.model.name} ${this.product.width}/${this.product.height} ${this.product.diameter} — SHINPI`
+		// document.title = `${this.product.brand.name} ${this.product.model.name} ${this.product.width}/${this.product.height} ${this.product.diameter} — SHINPI`
 	}
 }
 </script>

@@ -1,4 +1,4 @@
-import { $api } from '@/api'
+import { $api } from '@/http/api/index'
 
 export default class AuthService {
 	static async login(phone) {

@@ -7,9 +7,14 @@
 <script>
 import HeaderMain from '@/components/common/HeaderMain.vue'
 import FooterMain from '@/components/common/FooterMain.vue'
+import { mapActions } from 'vuex'
 
 export default {
-	components: { HeaderMain, FooterMain }
+	components: { HeaderMain, FooterMain },
+	methods: mapActions([ 'refresh' ]),
+	beforeMount() {
+		this.refresh()
+	}
 }
 </script>
 

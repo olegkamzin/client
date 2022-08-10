@@ -1,4 +1,4 @@
-import { $api, $apiget } from '@/api'
+import { $api, $apiget } from '@/http/api/index'
 
 export default class ProductService {
 	static async get(params) {

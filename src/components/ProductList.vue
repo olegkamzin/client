@@ -5,8 +5,8 @@
 			<div class="item" v-for="item in items" :key="item._id">
 				<div class="item_info">
 					<router-link class="item_img" :to="{ name: 'single', params: { category: 'tyres', id: item._id } }">
-						<img v-if="item.model.img.length !== 0" :src="item.model.img">
-						<img v-else src="../assets/no-img.png">
+						<img v-if="item.model.img.length !== 0" :src="'https://media.shinpi.ru/400/' + item.model.img[0]">
+						<img v-else src="../assets/no-img.webp">
 					</router-link>
 					<div class="params">
 						<div class="params_data">

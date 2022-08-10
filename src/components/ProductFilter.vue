@@ -10,7 +10,7 @@
 
 <script>
 import SelectMain from './ui/SelectMain.vue'
-import FilterService from '@/api/FilterService'
+import FilterService from '@/http/api/FilterService'
 
 export default {
 	name: 'product-filter',

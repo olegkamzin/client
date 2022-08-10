@@ -1,4 +1,4 @@
-import LoginService from '@/api/LoginService'
+import LoginService from '@/http/api/LoginService'
 import axios from 'axios'
 
 export const userAuth = {
@@ -53,7 +53,8 @@ export const userAuth = {
 			.catch(res => console.log(res.response?.data))
 		},
 		async refresh({ commit }) {
-			axios.get('http://localhost:3000/user/refresh', { withCredentials: true })
+			// LoginService.refresh()
+			axios.get('https://api.shinpi.ru/user/refresh', { withCredentials: true })
 			.then(res => {
 				commit('setAuth', true)
 				localStorage.setItem('token', res.data.accessToken)
@@ -61,7 +62,7 @@ export const userAuth = {
 			.catch(res => {
 				commit('setAuth', false)
 				commit('setCodeSend', false)
-				console.log(res.response?.data)
+				console.log(res)
 			})
 		}
 	}
