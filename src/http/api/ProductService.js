@@ -8,12 +8,14 @@ export default class ProductService {
 	}
 
     static async getByCategory(slug, params) {
-		return  $apiget.get('/product/' + slug, {
-			params: params
+		return  $apiget.get('/product/', {
+			params: { category: slug, ...params }
 		})
 	}
 
 	static async getOne(id) {
-		return $apiget.get('/product/single/' + id)
+		return $apiget.get('/product/', {
+			params: { id }
+		})
 	}
 }

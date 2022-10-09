@@ -18,6 +18,7 @@
 						<li><div v-if="product.params.season === 1"><icon-snow/>Зима</div><div v-else><icon-summer/>Лето</div>сезон</li>
 						<li><div><icon-weight/>{{ product.params.load_index }}</div> индекс нагрузки</li>
 						<li><div><icon-speed/>{{ product.params.speed_index }}</div> индекс скорости</li>
+						<li>{{ product.article }}</li>
 					</ul>
 				</div>
 				<div class="product_purchase">
@@ -34,7 +35,7 @@
 						<div class="buy_remains">
 							<span style="color: #1BB600" v-if="product.quantity > 6">В наличии много</span>
 							<span style="color: #1BB600" v-else-if="product.quantity <= 6 && product.quantity > 0">Осталось {{ product.quantity }}</span>
-							<span style="color: #ae0000" v-else-if="product.quantity = 0">Нет в наличии</span>
+							<span style="color: #ae0000" v-else-if="product.quantity === 0">Нет в наличии</span>
 						</div>
 					</div>
 					<div class="product_conditions">
