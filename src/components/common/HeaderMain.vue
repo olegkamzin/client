@@ -123,7 +123,7 @@ export default {
 .header_links ul li { margin: 0 10px; }
 .header_links ul li:first-child { margin-left: 0; }
 .header_links ul li:last-child { margin-right: 0; }
-.header_main { background: #272727; height: 60px; display: flex; }
+.header_main { background: #272727; height: 60px; display: flex; z-index: 99999; }
 .header_main.fixed { position: fixed; top: 0; left: 0; right: 0; }
 .header_menu { display: flex; align-items: center; }
 .header_menu .logo { margin: -8px 40px 0 0; }

@@ -3,6 +3,10 @@
 	<div class="catalog_block">
 		<div class="catalog_items">
 			<div class="item" v-for="item in items" :key="item._id">
+				<div v-if="item.quantity <= 4" class="quantity">
+					<span v-if="item.quantity === 0">Закончились</span>
+					<span v-else>Осталось {{ item.quantity }}</span>
+				</div>
 				<div class="item_info">
 					<router-link class="item_img" :to="{ name: 'single', params: { category: 'tyres', id: item._id } }">
 						<img v-if="item.model.img.length !== 0" :src="'https://media.shinpi.ru/400/' + item.model.img[0]">
@@ -69,10 +73,23 @@ export default {
 	align-content: space-between;
 	flex-direction: column;
 	justify-content: space-between;
+	position: relative;
 }
 .catalog_items .item:hover {
 	border: 1px solid #FFBE00;
 	box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.08);
+}
+.catalog_items .item .quantity {
+	position: absolute;
+    top: 20px;
+    right: 0;
+    background: #f00;
+    color: #FFF;
+    padding: 3px 10px;
+    font-size: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+    border-radius: 5px 0 0 5px;
 }
 .catalog_items .item_info {
 	padding: 10px;
