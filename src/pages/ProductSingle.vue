@@ -94,7 +94,7 @@ export default {
 .product_params { width: 220px; padding: 30px 0; }
 .product_purchase { width: 330px; padding: 30px; border: 1px solid #F0F0F0; border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; }
 .product_params ul { list-style: none; }
-.product_params ul li { margin: 0 0 20px 0px; align-items: center; }
+.product_params ul li { margin: 0 0 20px 0px; }
 .product_params ul li div { background: #F0F0F0; padding: 5px 10px; margin: 0 10px 0 0; font-weight: 600; border-radius: 4px; display: inline-flex; }
 .product_params ul li div svg { margin: 0 10px 0 0; }
 .product_params ul li.articul { font-size: 12px; color: #2e2e2e; }

@@ -5,9 +5,9 @@
 			<div class="item" v-for="item in items" :key="item._id">
 				<div v-if="item.quantity <= 4" class="quantity">
 					<span v-if="item.quantity === 0">Закончились</span>
-					<span v-else>Осталось {{ item.quantity }}</span>
+					<span v-else>{{ item.quantity }} шт</span>
 				</div>
-				<div class="item_info">
+				<div class="item_info" :class="{'none':item.quantity === 0}">
 					<router-link class="item_img" :to="{ name: 'single', params: { category: 'tyres', id: item._id } }">
 						<img v-if="item.model.img.length !== 0" :src="'https://media.shinpi.ru/400/' + item.model.img[0]">
 						<img v-else src="../assets/no-img.webp">
@@ -76,6 +76,9 @@ export default {
 	position: relative;
 	z-index: 0;
 }
+.catalog_items .item .none {
+	opacity: 0.5;
+}
 .catalog_items .item:hover {
 	border: 1px solid #FFBE00;
 	box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.08);
@@ -91,6 +94,7 @@ export default {
 	font-weight: 600;
 	text-transform: uppercase;
     border-radius: 4px 0 0 4px;
+	z-index: 1;
 }
 .catalog_items .item_info {
 	padding: 10px;

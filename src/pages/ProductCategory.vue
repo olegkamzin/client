@@ -22,6 +22,7 @@ export default {
 		selectParams(par) {
 			this.params = { limit: 24, page: 1 }
 			this.params = { ...this.params, ...par }
+			this.$router.push({ name: 'category', query: par })
 			this.productsGet()
 		},
 		async productsGet() {
