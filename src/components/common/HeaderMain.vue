@@ -95,7 +95,7 @@ export default {
 		},
 		async searchGet() {
 			console.log(this.search)
-			const res = await axios.get('https://api.shinpi.ru/api/search/', {
+			const res = await axios.get('https://api.shinpi.ru/search/', {
 				params: { string: this.search }
 			})
 			console.log(res.data)
