@@ -1,7 +1,7 @@
 <template>
 <header class="header">
 	<div class="notification">
-		Сайт в разработке! Заказать можно на <a href="https://market.yandex.ru/store--shinpi?businessId=10698030">Я.Маркете.</a>
+		Внимание! Сайт в разработке. Заказать можно на <a href="https://market.yandex.ru/store--shinpi?businessId=10698030">Я.Маркете.</a>
 	</div>
 	<div class="header_links">
 		<div class="header_block">
@@ -91,7 +91,7 @@ export default {
 			this.$emit('update:show', false)
 		},
 		handleScroll() {
-			this.scrolledLinks = window.scrollY > 72
+			this.scrolledLinks = window.scrollY > 90
 		},
 		async searchGet() {
 			console.log(this.search)
@@ -113,7 +113,7 @@ export default {
 </script>
 
 <style>
-.notification { height: 36px; background: #ae0000; color: #FFF; text-align: center; line-height: 36px; font-weight: 600; }
+.notification { background: #ae0000; color: #FFF; text-align: center; font-weight: 600; padding: 10px }
 .notification a { color: #ffbe00; }
 .header { height: 132px; }
 .header_block { width: 1020px; margin: 0 auto; display: flex; justify-content: space-between; }
