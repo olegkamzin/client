@@ -1,7 +1,7 @@
 <template>
 <header class="header">
 	<div class="notification">
-		Внимание! Сайт находится в разработке!
+		Внимание, сайт разработке! Заказать можно на <a href="https://market.yandex.ru/store--shinpi?businessId=10698030">Яндекс Маркете.</a>
 	</div>
 	<div class="header_links">
 		<div class="header_block">
