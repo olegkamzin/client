@@ -114,6 +114,7 @@ export default {
 
 <style>
 .notification { height: 36px; background: #ae0000; color: #FFF; text-align: center; line-height: 36px; font-weight: 600; }
+.notification a { color: #ffbe00; }
 .header { height: 132px; }
 .header_block { width: 1020px; margin: 0 auto; display: flex; justify-content: space-between; }
 .header_links { background: #000; height: 36px; line-height: 36px; color: #FFF; }
