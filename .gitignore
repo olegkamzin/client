@@ -3,3 +3,4 @@
 /package-lock.json
 src/.DS_Store
 src/.DS_Store
+.fleet/settings.json
