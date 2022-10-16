@@ -1,7 +1,7 @@
 <template>
 <div class="product" v-if="product.brand && product.model && product.params">
 	<div class="product_title">
-		<h1>{{ product.brand.name }} {{ product.model.name }} {{ product.params.width }}/{{ product.params.height }} {{ product.params.diameter }}</h1>
+		<h1>{{ product.brand.name }} {{ product.model.name }} {{ product.params.width }}/{{ product.params.height }} R{{ product.params.diameter }} {{ product.params.load_index }}{{ product.params.speed_index }}</h1>
 	</div>
 	<div class="wrapper">
 		<div class="product_body">
@@ -15,10 +15,10 @@
 						<li><div><icon-width/>{{ product.params.width }}</div> ширина</li>
 						<li><div><icon-height/>{{ product.params.height }}</div> профиль</li>
 						<li><div><icon-diameter/>{{ product.params.diameter }}</div> диаметр</li>
-						<li><div v-if="product.params.season === 1"><icon-snow/>Зима</div><div v-else><icon-summer/>Лето</div>сезон</li>
+						<li><div v-if="product.params.season === '1'"><icon-snow/>Зима</div><div v-else><icon-summer/>Лето</div>сезон</li>
 						<li><div><icon-weight/>{{ product.params.load_index }}</div> индекс нагрузки</li>
 						<li><div><icon-speed/>{{ product.params.speed_index }}</div> индекс скорости</li>
-						<li>{{ product.article }}</li>
+						<li class="articul">{{ product.article }}</li>
 					</ul>
 				</div>
 				<div class="product_purchase">
@@ -94,9 +94,10 @@ export default {
 .product_params { width: 220px; padding: 30px 0; }
 .product_purchase { width: 330px; padding: 30px; border: 1px solid #F0F0F0; border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; }
 .product_params ul { list-style: none; }
-.product_params ul li { margin: 0 0 20px 0px }
+.product_params ul li { margin: 0 0 20px 0px; display: inline-flex; align-items: center; }
 .product_params ul li div { background: #F0F0F0; padding: 5px 10px; margin: 0 10px 0 0; font-weight: 600; border-radius: 4px; display: inline-flex; }
 .product_params ul li div svg { margin: 0 10px 0 0; }
+.product_params ul li.articul { font-size: 12px; color: #2e2e2e; }
 .buy_info { display: flex; justify-content: space-between; align-items: center; margin: 0 0 15px 0; }
 .buy_price { font-size: 30px; font-weight: 600; }
 .buy_button { padding: 0 20px; height: 36px; background: #FFBE00; color: #000; border-radius: 4px; border: 0; text-transform: uppercase; font-size: 14px; font-weight: 600; width: 100%; }

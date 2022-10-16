@@ -74,6 +74,7 @@ export default {
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
+	z-index: 0;
 }
 .catalog_items .item:hover {
 	border: 1px solid #FFBE00;
@@ -89,7 +90,7 @@ export default {
     font-size: 10px;
 	font-weight: 600;
 	text-transform: uppercase;
-    border-radius: 5px 0 0 5px;
+    border-radius: 4px 0 0 4px;
 }
 .catalog_items .item_info {
 	padding: 10px;

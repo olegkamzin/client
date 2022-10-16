@@ -1,7 +1,7 @@
 <template>
 <header class="header">
 	<div class="notification">
-		Внимание! Сайт в разработке. Заказать можно на <a href="https://market.yandex.ru/store--shinpi?businessId=10698030">Яндекс Маркете</a>.
+		Внимание! Сайт в разработке. Заказать можно на <a href="https://market.yandex.ru/store--shinpi?businessId=10698030">Яндекс Маркете</a> с бесплатной доставкой.
 	</div>
 	<div class="header_links">
 		<div class="header_block">
@@ -139,7 +139,7 @@ export default {
 .menu_hamburger.active i { background: rgba(0, 0, 0, 0); }
 .menu_hamburger.active i:before { top: 0; background: #000; transform: rotate(45deg); }
 .menu_hamburger.active i:after { bottom: 0; background: #000; transform: rotate(-45deg); }
-.menu_modal { position: absolute; top: 132px; bottom: -36px; left: 0; right: 0; background: rgba(0, 0, 0, 0.3); }
+.menu_modal { position: absolute; top: 132px; bottom: -36px; left: 0; right: 0; background: rgba(0, 0, 0, 0.3); z-index: 1; }
 .menu_modal.fixed { position: fixed; top: 60px; }
 .menu_block { width: 1020px; background: #FFF; box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2); padding: 30px; margin: 0 auto; border-radius: 0px 0px 6px 6px; }
 .menu_links { display: flex; }

@@ -3,7 +3,7 @@
 	<div class="banner_del">
 		<div class="banner_text">
 			<h3><span>Бесплатная доставка</span> по всему городу</h3>
-			<p>Привезем шины на следующий день</p>
+			<p>Привезем шины в день заказа.</p>
 			<button-main class="button-yellow">Подробнее</button-main>
 		</div>
 		<img class="banner_img" src="../assets/banner-img-1.png" alt="">
@@ -13,8 +13,8 @@
 <div class="main-products">
 	<product-list :items="items">
 		<div class="main-more">
-			<button-main class="button-yellow" @click="$router.push({ name: 'category', params: { category: 'tyres' }, query: filter })">Смотреть все</button-main>
-			<p>Посмотрите полный каталог шин в наличии</p>
+			<button-main class="button-yellow" @click="$router.push({ name: 'category', params: { category: 'tyres' }, query: filter })">Все шины</button-main>
+			<p>Посмотрите полный каталог шин в наличии.</p>
 		</div>
 	</product-list>
 	
@@ -32,14 +32,14 @@ export default {
 	data() {
 		return {
 			items: [],
-			params: { limit: 3, page: 1 },
+			params: { limit: 3, page: 1, quantity: 1 },
 			filter: {},
 			title: 'SHINPI — магазин шин и дисков'
 		}
 	},
 	methods: {
 		selectParams(par) {
-			this.params = { limit: 3, page: 1 }
+			this.params = { limit: 3, page: 1, quantity: 1 }
 			this.params = { ...this.params, ...par }
 			this.filter = par
 			this.productsGet()

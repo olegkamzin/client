@@ -24,6 +24,6 @@ export default {
 </script>
 
 <style>
-.popup_main { top: 0; bottom: 0; right: 0; left: 0; background: rgba(0, 0, 0, 0.5); position: fixed; display: flex; }
+.popup_main { top: 0; bottom: 0; right: 0; left: 0; background: rgba(0, 0, 0, 0.5); position: fixed; display: flex; z-index: 1; }
 .popup_content { margin: auto; background: #FFF; box-shadow: 0 5px 50px rgba(0, 0, 0, 0.150); border-radius: 10px; min-height: 50px; min-width: 300px; padding: 30px; }
 </style>
