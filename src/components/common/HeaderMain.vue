@@ -34,7 +34,7 @@
 		<div @click.stop class="menu_block">
 			<div class="search_result" v-if="searchResult.length > 0">
 				<div class="search_result_item" v-for="result in searchResult" :key="result.item._id">
-					<router-link @click="catalogVisible = false" :to="'/tyres/' + result.item._id" class="title"><strong>{{ result.item.brand.name }} {{ result.item.model.name }}</strong> {{ result.item.width }}/{{ result.item.height }} {{ result.item.diameter }}</router-link>
+					<router-link @click="catalogVisible = false" :to="'/tyres/' + result.item._id" class="title"><strong>{{ result.item.brand.name }} {{ result.item.model.name }}</strong> {{ result.item.params.width }}/{{ result.item.params.height }} R{{ result.item.params.diameter }}</router-link>
 				</div>
 			</div>
 			<div v-else class="menu_links">
@@ -94,7 +94,6 @@ export default {
 			this.scrolledLinks = window.scrollY > 90
 		},
 		async searchGet() {
-			console.log(this.search)
 			const res = await axios.get('https://api.shinpi.ru/search/', {
 				params: { string: this.search }
 			})
