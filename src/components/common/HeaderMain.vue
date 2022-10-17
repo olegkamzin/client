@@ -112,7 +112,7 @@ export default {
 </script>
 
 <style>
-.notification { background: #ae0000; color: #FFF; text-align: center; font-weight: 600; padding: 10px }
+.notification { background: #ae0000; color: #FFF; text-align: center; font-weight: 600; padding: 10px; min-height: 38px; }
 .notification a { color: #ffbe00; }
 .header { height: 132px; }
 .header_block { width: 1020px; margin: 0 auto; display: flex; justify-content: space-between; }
@@ -138,7 +138,7 @@ export default {
 .menu_hamburger.active i { background: rgba(0, 0, 0, 0); }
 .menu_hamburger.active i:before { top: 0; background: #000; transform: rotate(45deg); }
 .menu_hamburger.active i:after { bottom: 0; background: #000; transform: rotate(-45deg); }
-.menu_modal { position: absolute; top: 132px; bottom: -36px; left: 0; right: 0; background: rgba(0, 0, 0, 0.3); z-index: 1; }
+.menu_modal { position: absolute; top: 134px; bottom: -36px; left: 0; right: 0; background: rgba(0, 0, 0, 0.3); z-index: 1; }
 .menu_modal.fixed { position: fixed; top: 60px; }
 .menu_block { width: 1020px; background: #FFF; box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2); padding: 30px; margin: 0 auto; border-radius: 0px 0px 6px 6px; }
 .menu_links { display: flex; }
