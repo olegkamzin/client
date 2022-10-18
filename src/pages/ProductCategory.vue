@@ -26,13 +26,12 @@ export default {
 			this.productsGet()
 		},
 		async productsGet() {
-			const res = await ProductService.getByCategory(this.$route.params.category, this.params)
-			this.items = res.data
+			this.items = (await ProductService.getByCategory(this.$route.params.category, this.params)).data
 		},
 		async productsGetMore() {
 			this.params.page += 1
-			const res = await ProductService.getByCategory(this.$route.params.category, this.params)
-			this.items = [...this.items, ...res.data]
+			const res = (await ProductService.getByCategory(this.$route.params.category, this.params)).data
+			this.items = [...this.items, ...res]
 		}
 	},
 	beforeMount() { document.title = this.title },
