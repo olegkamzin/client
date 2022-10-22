@@ -60,6 +60,7 @@ import IconSnow from '@/components/ui/icons/IconSnow.vue'
 import IconSummer from '@/components/ui/icons/IconSummer.vue'
 import IconCart from '@/components/ui/icons/IconCart.vue'
 import ProductService from '@/http/api/ProductService'
+import { create } from 'domain'
 
 export default {
 	components: { ButtonMain, IconWidth, IconHeight, IconDiameter, IconWeight, IconSpeed, IconSnow, IconSummer, IconCart },
@@ -78,7 +79,7 @@ export default {
 			this.quantity >= this.product.quantity ? this.quantity = this.product.quantity : ''
 		}
 	},
-	async beforeMount() {
+	async created() {
 		await this.productGet()
 		document.title = `${this.product.brand.name} ${this.product.model.name} ${this.product.params.width}/${this.product.params.height} R${this.product.params.diameter} ${this.product.params.load_index}${this.product.params.speed_index} | SHINPI`
 	}

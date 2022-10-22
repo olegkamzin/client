@@ -48,9 +48,9 @@ export default {
 			this.items = (await ProductService.getByCategory('tyres', this.params)).data
 		}
 	},
-	beforeMount() {
+	async created() {
+		await this.productsGet()
 		document.title = this.title
-		this.productsGet()
 	}
 }
 </script>

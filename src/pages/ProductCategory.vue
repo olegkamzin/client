@@ -34,7 +34,7 @@ export default {
 			this.items = [...this.items, ...res]
 		}
 	},
-	beforeMount() { document.title = this.title },
+	created() { document.title = this.title },
 	mounted() {
 		this.params = { ...this.params, ...this.$route.query }
 		this.productsGet()
