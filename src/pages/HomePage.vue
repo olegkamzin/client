@@ -33,8 +33,7 @@ export default {
 		return {
 			items: [],
 			params: { limit: 3, page: 1, quantity: 1 },
-			filter: {},
-			title: 'SHINPI — магазин шин и дисков'
+			filter: {}
 		}
 	},
 	methods: {
@@ -49,8 +48,8 @@ export default {
 		}
 	},
 	async created() {
+		document.title = 'SHINPI — магазин шин и дисков'
 		await this.productsGet()
-		document.title = this.title
 	}
 }
 </script>

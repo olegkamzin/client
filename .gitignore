@@ -4,3 +4,5 @@
 src/.DS_Store
 src/.DS_Store
 .fleet/settings.json
+.idea
+.fleet
