@@ -78,9 +78,9 @@ export default {
 			this.quantity >= this.product.quantity ? this.quantity = this.product.quantity : ''
 		}
 	},
-	beforeMount() {
-		this.productGet()
-		// document.title = `${this.product.brand.name} ${this.product.model.name} ${this.product.width}/${this.product.height} ${this.product.diameter} — SHINPI`
+	async beforeMount() {
+		await this.productGet()
+		document.title = `${this.product.brand.name} ${this.product.model.name} ${this.product.params.width}/${this.product.params.height} R${this.product.params.diameter} ${this.product.params.load_index}${this.product.params.speed_index} | SHINPI`
 	}
 }
 </script>

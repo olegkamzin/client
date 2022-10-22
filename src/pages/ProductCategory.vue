@@ -15,7 +15,7 @@ export default {
 		return {
 			items: [],
 			params: { limit: 24, page: 1 },
-			title: 'Все шины — SHINPI'
+			title: 'Купить шины | SHINPI'
 		}
 	},
 	methods: {
