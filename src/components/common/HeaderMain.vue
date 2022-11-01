@@ -21,7 +21,7 @@
 			<div class="header_menu">
 				<div class="logo"><router-link :to="{ name: 'main' }"><img src="../.././assets/logo.svg"></router-link></div>
 				<button-main @click="catalogVisible ? catalogVisible = false : catalogVisible = true" class="button-yellow"><div class="menu_hamburger" v-bind:class="{ active: catalogVisible }"><i></i></div>Каталог</button-main>
-				<input-search v-model="search" @focus="catalogVisible = true" @focusout="catalogVisible = false" @input="searchGet" />
+				<input-search v-model="search" @focus="catalogVisible = true" @focusout="catalogVisible = false" />
 			</div>
 			<div class="header_panel">
 				<button-main class="button-gray" @click="authShow = true">вход<icon-enter fill="#ECECEC"/></button-main>
@@ -94,11 +94,11 @@ export default {
 			this.scrolledLinks = window.scrollY > 90
 		},
 		async searchGet() {
-			const res = await axios.get('https://api.shinpi.ru/search/', {
-				params: { string: this.search }
-			})
-			console.log(res.data)
-			this.searchResult = res.data
+			// const res = await axios.get('https://api.shinpi.ru/search/', {
+			// 	params: { string: this.search }
+			// })
+			// console.log(res.data)
+			// this.searchResult = res.data
 		}
 	},
 	mounted() {
