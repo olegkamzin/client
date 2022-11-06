@@ -12,9 +12,9 @@ import { mapActions } from 'vuex'
 export default {
 	components: { HeaderMain, FooterMain },
 	methods: mapActions([ 'refresh' ]),
-	beforeMount() {
-		this.refresh()
-	}
+	// beforeMount() {
+	// 	this.refresh()
+	// }
 }
 </script>
 
