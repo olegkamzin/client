@@ -105,7 +105,7 @@ export default {
 }
 .catalog_items .item_img img {
 	max-width: 185px;
-	max-height: 185px;
+	height: 185px;
 	margin: 10px 0 20px 0;
 }
 .catalog_items .item .params {

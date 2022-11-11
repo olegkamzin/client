@@ -1,5 +1,5 @@
 <template>
-<input class="search" type="text" v-model="search" placeholder="Поиск..." />
+<input class="search" type="text" v-bind="search" placeholder="Поиск..." />
 </template>
 
 <script>
