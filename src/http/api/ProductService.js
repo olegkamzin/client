@@ -14,8 +14,6 @@ export default class ProductService {
 	}
 
 	static async getOne(id) {
-		return $apiget.get('/product/', {
-			params: { id }
-		})
+		return $apiget.get('/product/' + id)
 	}
 }
