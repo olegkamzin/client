@@ -1,7 +1,7 @@
 <template>
 <header class="header">
 	<div class="notification">
-		Внимание! Сайт в разработке. Заказать можно на <a href="https://market.yandex.ru/store--shinpi?businessId=10698030">Яндекс Маркете</a> с бесплатной доставкой.
+		Сайт в разработке. Заказать можно на <a href="https://market.yandex.ru/store--shinpi?businessId=10698030">Яндекс Маркете</a> с бесплатной доставкой или по телефона в Нижнем Новгороде.
 	</div>
 	<div class="header_links">
 		<div class="header_block">
@@ -65,7 +65,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import ButtonMain from '../ui/ButtonMain.vue'
 import InputSearch from '../ui/InputSearch.vue'
 import IconLike from '../ui/icons/IconLike.vue'
@@ -91,7 +90,7 @@ export default {
 			this.$emit('update:show', false)
 		},
 		handleScroll() {
-			this.scrolledLinks = window.scrollY > 90
+			this.scrolledLinks = window.scrollY > 36
 		},
 		async searchGet() {
 			// const res = await axios.get('https://api.shinpi.ru/search/', {
@@ -112,9 +111,24 @@ export default {
 </script>
 
 <style>
-.notification { background: #ae0000; color: #FFF; text-align: center; font-weight: 600; padding: 10px; min-height: 38px; }
-.notification a { color: #ffbe00; }
-.header { height: 132px; }
+.notification {
+	background: rgba(174, 0, 0, 0.8);
+	color: #FFF;
+	text-align: center;
+	font-weight: 600;
+	padding: 15px;
+	position: fixed;
+	width: 800px;
+	border-radius: 8px;
+	z-index: 99999999;
+	backdrop-filter: blur(10px);
+	bottom: 10px;
+	left: calc(50% - 400px);
+}
+.notification a {
+	color: #ffbe00;
+}
+.header { height: 96px; }
 .header_block { width: 1020px; margin: 0 auto; display: flex; justify-content: space-between; }
 .header_links { background: #000; height: 36px; line-height: 36px; color: #FFF; }
 .header_links a { color: #FFF; text-decoration: none; }
@@ -138,7 +152,7 @@ export default {
 .menu_hamburger.active i { background: rgba(0, 0, 0, 0); }
 .menu_hamburger.active i:before { top: 0; background: #000; transform: rotate(45deg); }
 .menu_hamburger.active i:after { bottom: 0; background: #000; transform: rotate(-45deg); }
-.menu_modal { position: absolute; top: 134px; bottom: -36px; left: 0; right: 0; background: rgba(0, 0, 0, 0.3); z-index: 1; }
+.menu_modal { position: absolute; top: 96px; bottom: -36px; left: 0; right: 0; background: rgba(0, 0, 0, 0.3); z-index: 1; }
 .menu_modal.fixed { position: fixed; top: 60px; }
 .menu_block { width: 1020px; background: #FFF; box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2); padding: 30px; margin: 0 auto; border-radius: 0px 0px 6px 6px; }
 .menu_links { display: flex; }
@@ -151,13 +165,17 @@ export default {
 .modal_show-enter-from, .modal_show-leave-to { opacity: 0; }
 
 @media screen and (max-width: 1020px) {
-.header_block { width: 100%; padding: 0 20px; }
-.header_links .header_block ul:first-child { display: none; }
-.header_menu { justify-content: space-between; width: 100%; }
-.header_menu input { display: none; }
-.header_panel { display: none; }
-.menu_modal { top: 151px; }
-.menu_block { width: 100%; padding: 10px; }
-.menu_item { margin: 10px 20px; width: 50%; }
+	.notification {
+		width: 92%;
+		left: calc(50% - 46%);
+	}
+	.header_block { width: 100%; padding: 0 20px; }
+	.header_links .header_block ul:first-child { display: none; }
+	.header_menu { justify-content: space-between; width: 100%; }
+	.header_menu input { display: none; }
+	.header_panel { display: none; }
+	.menu_modal { top: 151px; }
+	.menu_block { width: 100%; padding: 10px; }
+	.menu_item { margin: 10px 20px; width: 50%; }
 }
 </style>
