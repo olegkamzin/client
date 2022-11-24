@@ -112,18 +112,19 @@ export default {
 
 <style>
 .notification {
-	background: rgba(174, 0, 0, 0.8);
+	background: rgba(174, 0, 0, 0.75);
 	color: #FFF;
 	text-align: center;
 	font-weight: 600;
 	padding: 15px;
 	position: fixed;
 	width: 800px;
-	border-radius: 8px;
+	border-radius: 12px;
 	z-index: 99999999;
-	backdrop-filter: blur(10px);
-	bottom: 10px;
+	backdrop-filter: blur(15px);
+	bottom: 20px;
 	left: calc(50% - 400px);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 .notification a {
 	color: #ffbe00;
@@ -168,6 +169,7 @@ export default {
 	.notification {
 		width: 92%;
 		left: calc(50% - 46%);
+		bottom: 10px;
 	}
 	.header_block { width: 100%; padding: 0 20px; }
 	.header_links .header_block ul:first-child { display: none; }
