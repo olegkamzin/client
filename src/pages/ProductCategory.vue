@@ -14,14 +14,14 @@ export default {
 	data() {
 		return {
 			items: [],
-			params: { limit: 24, page: 1 },
+			params: { limit: 24, page: 1, quantity: 1 },
 			title: 'Купить шины | SHINPI'
 		}
 	},
 	methods: {
 		selectParams(par) {
-			this.params = { limit: 24, page: 1 }
-			this.params = { ...this.params, ...par }
+			this.params = { limit: 24, page: 1, quantity: 1, ...par }
+			console.log(this.params)
 			this.$router.push({ name: 'category', query: par })
 			this.productsGet()
 		},

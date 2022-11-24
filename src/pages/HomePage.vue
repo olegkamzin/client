@@ -38,7 +38,7 @@ export default {
 	},
 	methods: {
 		selectParams(par) {
-			this.params = { ...this.params, ...par }
+			this.params = { limit: 3, page: 1, quantity: 1, ...par }
 			this.filter = par
 			this.productsGet()
 		},

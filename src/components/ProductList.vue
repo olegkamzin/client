@@ -14,9 +14,8 @@
 					</router-link>
 					<div class="params">
 						<div class="params_data">
-							<span>{{ item.params.width }}</span>
-							<span>{{ item.params.height }}</span>
-							<span>R{{ item.params.diameter }}</span>
+							<span>{{ item.params.width }}/{{ item.params.height }} R{{ item.params.diameter }}</span>
+							<span>{{ item.params.load_index }}{{ item.params.speed_index }}</span>
 						</div>
 						<div class="params_icons">
 							<icon-snow v-if="item.params.season === '1'"/><icon-summer v-else/>

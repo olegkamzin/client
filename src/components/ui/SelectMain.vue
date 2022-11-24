@@ -1,5 +1,5 @@
 <template>
-	<select class="select" v-bind="modelValue" @change="changeOption">
+	<select class="select" v-model="modelValue" @change="changeOption">
 		<option v-for="option in options" :key="option.value" :value="option.value">{{ option.name }}</option>
 	</select>
 </template>
@@ -9,11 +9,12 @@ export default {
 	name: 'select-main',
 	props: {
 		modelValue: {
-			type: [String, Number]
+			type: [String, Number, Object],
+			default: 'none'
 		},
 		options: {
-			type: [String, Array],
-			default: 'none'
+			type: Array,
+			default: [{ name: 'Нет', value: 'none' }]
 		}
 	},
 	methods: {

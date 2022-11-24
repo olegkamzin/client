@@ -15,7 +15,12 @@ import FilterService from '@/http/api/FilterService'
 export default {
 	name: 'product-filter',
 	components: {
-		SelectMain, SelectMain
+		SelectMain
+	},
+	props: {
+		sortFilter: {
+			type: Object
+		}
 	},
 	data() {
 		return {
@@ -30,16 +35,16 @@ export default {
 	},
 	methods: {
 		async getFilter(slug) {
-			this.params = (await FilterService.get(slug)).data
+			return (await FilterService.get(slug)).data
 		}
 	},
-	mounted() {
+	async mounted() {
 		
 	},
-	beforeMount() {
-		this.getFilter('tyres')
+	async beforeMount() {
+		this.params = await this.getFilter('tyres')
 	},
-	beforeCreate() {
+	async beforeCreate() {
 		
 	},
 	watch: {
@@ -80,6 +85,7 @@ export default {
 				delete this.filter.brand
 				return this.$emit('sortFilter', this.filter)
 			}
+
 			this.filter.brand = newValue
 			this.$emit('sortFilter', this.filter)
 		}
