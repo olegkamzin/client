@@ -14,7 +14,11 @@
 					</router-link>
 					<div class="params">
 						<div class="params_data">
-							<span>{{ item.params.width }}/{{ item.params.height }} R{{ item.params.diameter }}</span>
+							<span>{{ item.params.width }}</span>
+							<span>{{ item.params.height }}</span>
+							<span>R{{ item.params.diameter }}</span>
+						</div>
+						<div class="params_data">
 							<span>{{ item.params.load_index }}{{ item.params.speed_index }}</span>
 						</div>
 						<div class="params_icons">
@@ -80,7 +84,7 @@ export default {
 }
 .catalog_items .item:hover {
 	border: 1px solid #FFBE00;
-	box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
 }
 .catalog_items .item .quantity {
 	position: absolute;
@@ -112,22 +116,21 @@ export default {
 }
 .catalog_items .item .params_data {
 	background: #f0f0f0;
-	
 	border-radius: 6px;
+	margin: 0 10px 0 0;
 }
 .catalog_items .item .params_data span {
-	padding: 3px 10px;
+	padding: 3px 7px;
     border-right: 1px solid #FFF;
     font-size: 12px;
     display: inline-block;
 }
 .catalog_items .item .params_data span:last-child {
-	border: 0;
+	border: 0
 }
 .catalog_items .item .params_icons {
 	display: flex;
 	align-items: center;
-	margin: 0 0 0 10px;
 }
 .catalog_items .item a.title {
 	color: #000;
