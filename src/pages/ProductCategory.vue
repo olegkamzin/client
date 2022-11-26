@@ -35,16 +35,16 @@ export default {
 		}
 	},
 	created() { document.title = this.title },
-	mounted() {
+	async mounted() {
 		this.params = { ...this.params, ...this.$route.query }
-		this.productsGet()
+		await this.productsGet()
 		const options = {
 			rootMargin: '0px',
 			threshold: 1.0
 		}
-		const callback = (entries, observer) => {
+		const callback = async (entries, observer) => {
 			if (entries[0].isIntersecting) {
-				this.productsGetMore()
+				await this.productsGetMore()
 			}
 		};
 		const observer = new IntersectionObserver(callback, options)
