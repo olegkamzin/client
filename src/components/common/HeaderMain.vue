@@ -112,7 +112,7 @@ export default {
 
 <style>
 .notification {
-	background: rgba(174, 0, 0, 0.75);
+	background: rgba(230, 0, 0, 0.75);
 	color: #FFF;
 	text-align: center;
 	font-weight: 600;

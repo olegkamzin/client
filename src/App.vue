@@ -28,7 +28,7 @@ svg { box-sizing: content-box; }
 h1 { font-size: 30px; margin: 0 0 20px 0; }
 h2 { font-size: 26px; margin: 0 0 20px 0; }
 h3 { font-size: 22px; margin: 0 0 20px 0; }
-.wrapper { padding: 30px; background: #FFF; }
+.wrapper { padding: 30px 0; background: #FFF; }
 @media screen and (max-width: 1020px) {
 .wrapper { padding: 10px; } 
 }
