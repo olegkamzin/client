@@ -43,7 +43,7 @@ export default {
 			this.productsGet()
 		},
 		async productsGet() {
-			this.items = (await ProductService.getByCategory('tyres', this.params)).data
+			this.items = (await ProductService.getByCategory('tyres', this.params)).data.result
 		}
 	},
 	async created() {

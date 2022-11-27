@@ -19,7 +19,7 @@ export default {
 	},
 	props: {
 		sortFilter: {
-			type: Array
+			type: Object
 		}
 	},
 	data() {
