@@ -120,7 +120,7 @@ export default {
 	margin: 0 5px 0 0;
 }
 .catalog_items .item .params_data span {
-	padding: 3px 5px;
+	padding: 3px;
     border-right: 1px solid #FFF;
     font-size: 12px;
     display: inline-block;
