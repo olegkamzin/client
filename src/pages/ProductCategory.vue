@@ -50,8 +50,8 @@ export default {
 			this.$router.push(({ name: 'category', query: { ...this.params } }))
 		}
 	},
-	// created() { document.title = this.title },
 	async created() {
+		document.title = this.title
 		this.params = { ...this.params, ...this.$route.query }
 		this.params.page = Number(this.params.page)
 		await this.productsGet()
