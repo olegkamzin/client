@@ -5,7 +5,7 @@
 	<ul>
 		<li v-if="params.page !== 1" class="select_page" @click="productsGet(1)">В начало</li>
 		<li class="un" :class="{ 'select_page' : page === params.page }" v-for="page in pages.showPage" :key="page" @click="productsGet(page)">{{ page }}</li>
-		<li v-if="params.page !== pages.last_page" class="select_page" @click="productsGet(params.page + 1)">Дальше</li>
+		<li v-if="params.page !== pages.last_page && pages.last_page !== undefined" class="select_page" @click="productsGet(params.page + 1)">Дальше</li>
 	</ul>
 </div>
 </template>
