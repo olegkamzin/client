@@ -124,7 +124,7 @@ export default {
 	backdrop-filter: blur(15px);
 	bottom: 20px;
 	left: calc(50% - 400px);
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 .notification a {
 	color: #ffbe00;

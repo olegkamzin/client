@@ -38,14 +38,8 @@ export default {
 			return (await FilterService.get(slug)).data
 		}
 	},
-	async mounted() {
-		
-	},
-	async beforeMount() {
+	async created() {
 		this.params = await this.getFilter('tyres')
-	},
-	async beforeCreate() {
-		
 	},
 	watch: {
 		selectedWidth(newValue) {
