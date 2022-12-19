@@ -1,7 +1,7 @@
 <template>
 <header class="header">
 	<div class="notification">
-		Сайт в разработке. Заказать можно на <a href="https://market.yandex.ru/store--shinpi?businessId=10698030">Яндекс Маркете</a> с бесплатной доставкой или по телефона в Нижнем Новгороде.
+		Сайт в разработке. Заказать можно на <a href="https://market.yandex.ru/store--shinpi?businessId=10698030">Яндекс Маркете</a> с бесплатной доставкой или по телефону в Нижнем Новгороде.
 	</div>
 	<div class="header_links">
 		<div class="header_block">
