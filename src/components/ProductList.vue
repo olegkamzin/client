@@ -21,11 +21,16 @@
 						<div class="params_data">
 							<span>{{ item.params.load_index }}{{ item.params.speed_index }}</span>
 						</div>
+						<div v-if="item.params.runflat === '1'" class="params_data">
+							<span>RunFlat</span>
+						</div>
 						<div class="params_icons">
 							<icon-snow v-if="item.params.season === '1'"/><icon-summer v-else/>
 						</div>
 					</div>
-					<router-link :to="{ name: 'single', params: { category: 'tyres', id: item._id } }" class="title">{{ item.brand.name }} {{ item.model.name }}</router-link>
+					<router-link :to="{ name: 'single', params: { category: 'tyres', id: item._id } }" class="title">
+						{{ item.brand.name }} {{ item.model.name }}
+					</router-link>
 				</div>
 				<div class="item_price">
 					<button-main class="button-yellow">
@@ -70,7 +75,7 @@ export default {
 .catalog_items .item {
 	border: 1px solid #f0f0f0;
 	border-radius: 6px;
-	width: 240px;
+	/* width: 240px; */
 	transition: 0.15s ease-in;
 	display: flex;
 	align-content: space-between;
@@ -120,7 +125,7 @@ export default {
 	margin: 0 5px 0 0;
 }
 .catalog_items .item .params_data span {
-	padding: 3px;
+	padding: 3px 4px;
     border-right: 1px solid #FFF;
     font-size: 12px;
     display: inline-block;
@@ -155,19 +160,27 @@ export default {
 }
 
 @media screen and (max-width: 1020px) {
-.catalog_block { width: 100%; margin: 0; }
-.catalog_items { display: grid; gap: 10px; grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+	.catalog_block { width: 100%; margin: 0; }
+	.catalog_items {
+		display: grid;
+		gap: 10px;
+		grid-template-columns: calc(33% - 5px) calc(33% - 5px) calc(33% - 5px);
+	}
 }
-.catalog_items .item {
-	border: 1px solid #f0f0f0;
-	border-radius: 6px;
-	width: 100%;
-	transition: 0.15s ease-in;
-	display: flex;
-	align-content: space-between;
-	flex-direction: column;
-	justify-content: space-between;
+@media screen and (max-width: 750px) {
+	.catalog_block { width: 100%; margin: 0; }
+	.catalog_items {
+		display: grid;
+		gap: 10px;
+		grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+	}
 }
-.catalog_items .item_price .delivery { display: none; }
+@media screen and (max-width: 500px) {
+	.catalog_block { width: 100%; margin: 0; }
+	.catalog_items {
+		display: grid;
+		gap: 10px;
+		grid-template-columns: calc(100% - 5px);
+	}
 }
 </style>

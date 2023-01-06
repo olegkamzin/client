@@ -1,7 +1,8 @@
 <template>
 <div class="product">
 	<div class="product_title">
-		<h1>{{ product.brand.name }} {{ product.model.name }} {{ product.params.width }}/{{ product.params.height }} R{{ product.params.diameter }} {{ product.params.load_index }}{{ product.params.speed_index }}</h1>
+		<h1 v-if="product.params.runflat === '1'">{{ product.brand.name }} {{ product.model.name }} RunFlat {{ product.params.width }}/{{ product.params.height }} R{{ product.params.diameter }} {{ product.params.load_index }}{{ product.params.speed_index }}</h1>
+		<h1 v-else>{{ product.brand.name }} {{ product.model.name }} {{ product.params.width }}/{{ product.params.height }} R{{ product.params.diameter }} {{ product.params.load_index }}{{ product.params.speed_index }}</h1>
 	</div>
 	<div class="wrapper">
 		<div class="product_body">
