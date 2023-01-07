@@ -128,6 +128,7 @@ export default {
 	padding: 3px 4px;
     border-right: 1px solid #FFF;
     font-size: 12px;
+	font-weight: 500;
     display: inline-block;
 }
 .catalog_items .item .params_data span:last-child {
