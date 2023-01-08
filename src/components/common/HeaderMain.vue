@@ -176,7 +176,6 @@ export default {
 	.header_menu { justify-content: space-between; width: 100%; }
 	.header_menu input { display: none; }
 	.header_panel { display: none; }
-	.menu_modal { top: 151px; }
 	.menu_block { width: 100%; padding: 10px; }
 	.menu_item { margin: 10px 20px; width: 50%; }
 }
